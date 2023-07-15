@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    nav {
+      width: 100%;
+
+    }
+
+    .imagem {
+      height: 80vh;
+      width: 90%;
+      background-size: cover;
+      background-position: top;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body class="bg-dark-subtle" style="height: 100vh">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="position: fixed; z-index: 100;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Site Oficial</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+  <br>
+  <br>
+  <br>
+  <div class="imagem"
+    style="background-image: url(https://i.pinimg.com/564x/87/97/19/879719e10f745d96bd58464ffe8b0910.jpg); background-position: top;" id="img"> 
+    <div style="border-radius: 10px; height: 100%; width: 100%; position:absolute; background-color: rgba(0, 0, 0, 0.521); display: flex; flex-direction: column; align-items: center; justify-content: center;"><h1 style="color: white; font-size: 40px;">Fantasy - Mistery RPG</h1><code style="color: white;">2023 - Versão 1.0</code></div>
+  </div>
+  <script>
+    imagens = ["url(https://i.pinimg.com/564x/b5/09/b2/b509b258d869731cb0580b5fa7eb0f29.jpg)",
+      "url(https://i.pinimg.com/564x/54/31/99/54319955b3159284a35145cef08cb370.jpg)",
+      "url(https://i.pinimg.com/564x/07/ce/36/07ce363cd1f92cee82fd2fab632dcf8f.jpg)",
+      "url(https://i.pinimg.com/564x/dc/97/21/dc9721f90591a628a2d0d5c9da04d3ac.jpg)",
+      "url(https://i.pinimg.com/564x/87/97/19/879719e10f745d96bd58464ffe8b0910.jpg)"];
+    index = 0;
+    console.log(imagens);
+    setInterval(() => {
+      let img = document.getElementById('img');
+
+      if (imagens[index] == "url(https://i.pinimg.com/564x/54/31/99/54319955b3159284a35145cef08cb370.jpg)") {
+        img.style.backgroundImage = imagens[index];
+        img.style.backgroundPosition = "top"
+        if (index == 4) {
+          index = 0;
+        } else {
+          index++
+        }
+      } else if (imagens[index] == "url(https://i.pinimg.com/564x/b5/09/b2/b509b258d869731cb0580b5fa7eb0f29.jpg)") {
+        img.style.backgroundImage = imagens[index];
+        img.style.backgroundPosition = "center"
+        if (index == 4) {
+          index = 0;
+        } else {
+          index++
+        }
+      } else {
+        img.style.backgroundImage = imagens[index];
+        img.style.backgroundPosition = "top"
+        if (index == 4) {
+          index = 0;
+        } else {
+          index++
+        }
+      }
+
+
+    }, 2500);
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
