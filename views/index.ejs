@@ -35,42 +35,84 @@
       text-align: center;
       position: relative;
     }
-    .img{
+
+    .img {
       border: 1px solid black;
       border-radius: 10px;
-      
+
     }
-    label{
+
+    label {
       z-index: 120;
     }
-    #menu{
-      opacity: 0;   
+
+    #menu {
+      opacity: 0;
     }
-    #indice{
+
+    #indice {
       right: -80vw;
       z-index: 110;
-      transition: 0.5s all; 
+      transition: 0.5s all;
+      width: 70vw;
+      height: 100vh;
+      background-color: white;
+      position: fixed;
+      border-left: 1px solid rgb(0, 0, 0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 60px
     }
-    #protector{
+
+    #topicos {
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid black;
+    }
+
+    #protector {
       transition: 1s all;
     }
-    
   </style>
 </head>
 
 <body style="height: 100vh; background-color: rgb(17, 17, 17);">
-  <div id="indice" style="width: 70vw; height: 100vh; background-color: white; position: fixed; border-left: 1px solid rgb(0, 0, 0);">
-
+  <div id="indice">
+    <br>
+    <ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; width: 100%; height: 100%;">
+      <div id="topicos">
+        <li style="font-size: 12px; font-weight: bolder; display: flex; flex-direction: column; align-items: center;">
+          <img src="https://www.pngmart.com/files/22/Hollow-Knight-PNG-File.png" width="70">Personagens
+        </li>
+      </div>
+      <br>
+      <div id="topicos">
+        <li style="font-size: 12px; font-weight: bolder; display: flex; flex-direction: column; align-items: center;">
+          <img src="https://cdn-icons-png.flaticon.com/512/2619/2619285.png" width="70">Atributos
+        </li>
+      </div>
+      <br>
+      <div id="topicos">
+        <li style="font-size: 12px; font-weight: bolder; display: flex; flex-direction: column; align-items: center;">
+          <img
+            src="https://camo.githubusercontent.com/c865def977d499ef649c2d0d94f50c203761bdcf56a95c98fa6f33c350057029/68747470733a2f2f646963652d726f6c6c65722e6769746875622e696f2f646f63756d656e746174696f6e2f646963652d726f6c6c65722d6c6f676f2e706e67"
+            width="70">Dados</li>
+      </div>
+    </ul>
   </div>
-  <div id="protector" style="opacity: 0; position: fixed; height: 100%; width: 100%; z-index: 70; background-color: rgba(0, 0, 0, 0.658);">
+  </div>
+  <div id="protector"
+    style="opacity: 0; position: fixed; height: 100%; width: 100%; z-index: 70; background-color: rgba(0, 0, 0, 0.658);">
 
   </div>
   <nav>
     <div class="navbar" style="position: relative; width: 100%; height: 100%">
-      <label for="menu"><img class="img" src="https://cdn.icon-icons.com/icons2/1776/PNG/512/multipleline_114207.png" width="50" height="50" style="padding: 10px; left: 10px; top: 5px; position: absolute"></label>
+      <label for="menu"><img class="img" src="https://cdn.icon-icons.com/icons2/1776/PNG/512/multipleline_114207.png"
+          width="50" height="50" style="padding: 10px; left: 10px; top: 5px; position: absolute"></label>
       <input type="checkbox" id="menu">
     </div>
-  </nav> 
+  </nav>
 
   <br>
   <br>
@@ -84,6 +126,10 @@
         style="color: white;">2023 - Versão 1.0</code>
     </div>
   </div>
+  <br>
+  <code 
+        style="color: white;">Aperte no menu e veja os tópicos!</code>
+  <br>
   <script>
     imagens = ["url(https://i.pinimg.com/564x/b5/09/b2/b509b258d869731cb0580b5fa7eb0f29.jpg)",
       "url(https://i.pinimg.com/564x/54/31/99/54319955b3159284a35145cef08cb370.jpg)",
@@ -123,14 +169,14 @@
       }
     }, 2500);
     let menu = document.getElementById('menu');
-    menu.addEventListener('click', function(){
-      if (menu.checked){
+    menu.addEventListener('click', function () {
+      if (menu.checked) {
         document.getElementById('indice').style.right = "0"
         document.getElementById('protector').style.opacity = 1
-    } else {
-      document.getElementById('indice').style.right = "-70vw"
-      document.getElementById('protector').style.opacity = 0
-    }
+      } else {
+        document.getElementById('indice').style.right = "-70vw"
+        document.getElementById('protector').style.opacity = 0
+      }
     })
   </script>
 
